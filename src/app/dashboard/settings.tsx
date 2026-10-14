@@ -1,3 +1,4 @@
+import { AddTransaction } from "@/components/add-transaction";
 import { authClient } from "@/lib/auth-client";
 import { router } from "expo-router";
 import { ActivityIndicator, Button, StyleSheet, Text, View } from "react-native";
@@ -29,6 +30,7 @@ export default function SettingsScreen() {
       ) : (
         <Text style={styles.text}>No user logged in</Text>
       )}
+      <AddTransaction />
     </View>
   );
 }

@@ -6,3 +6,4 @@
 - Reaches for official/vendor-provided resources (e.g. Expo's published skills) instead of hand-writing equivalent guidance. Confidence: 0.6
 - Installs skills incrementally by handing over the upstream GitHub URL and expecting the agent to fetch the manifest plus everything it references; treats skill installation as an ongoing accumulation within one project. Confidence: 0.6
 - Prefers idiomatic framework navigation structure over hand-rolled UI: for Expo Router bottom tabs, wants the standard file-based route group (`dashboard/` folder with `_layout.tsx` `<Tabs>` and one route file per tab) rather than in-screen state-driven tab bars. Confidence: 0.5
+- Requests UI features in terse, concrete terms — exact position and icon (e.g. "floating button, must be a + icon, on the right down") plus the component name to use (e.g. `AddTransaction`) — and expects the agent to pick file placement/conventions itself. Confidence: 0.45

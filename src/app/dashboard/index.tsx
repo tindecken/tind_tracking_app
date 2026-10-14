@@ -1,3 +1,4 @@
+import { AddTransaction } from "@/components/add-transaction";
 import { authClient } from "@/lib/auth-client";
 import { StyleSheet, Text, View } from "react-native";
 
@@ -11,6 +12,7 @@ export default function SummaryScreen() {
         {user ? `Welcome, ${user.name}` : "No user logged in"}
       </Text>
       <Text style={styles.text}>No summary data yet.</Text>
+      <AddTransaction />
     </View>
   );
 }
