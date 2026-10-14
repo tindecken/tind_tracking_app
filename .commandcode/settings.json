@@ -3,7 +3,13 @@
     "allow": [
       "Shell(npx tsc --noEmit)",
       "Shell(npx tsc --noEmit 2 >& 1)",
-      "Shell(findstr:*)"
+      "Shell(findstr:*)",
+      "Shell(cmdc:*)",
+      "powershell",
+      "Shell(npx expo lint)",
+      "Shell(git:*)",
+      "Shell(if:*)",
+      "Shell({:*)"
     ],
     "deny": [],
     "defaultMode": "default"
