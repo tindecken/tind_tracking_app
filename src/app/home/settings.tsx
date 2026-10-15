@@ -1,7 +1,13 @@
 import { AddTransaction } from "@/components/add-transaction";
 import { authClient } from "@/lib/auth-client";
 import { router } from "expo-router";
-import { ActivityIndicator, Button, StyleSheet, Text, View } from "react-native";
+import {
+  ActivityIndicator,
+  Button,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 
 export default function SettingsScreen() {
   const { data: session, isPending } = authClient.useSession();

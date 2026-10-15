@@ -12,14 +12,14 @@ export default function SocialSignIn() {
     console.log("Logging in with Google...");
     const { error } = await authClient.signIn.social({
       provider: "google",
-      callbackURL: Linking.createURL("/dashboard"),
+      callbackURL: Linking.createURL("/home"),
       additionalParams: { prompt: "select_account" },
     });
     if (error) {
       // handle error
       return;
     }
-    router.replace("/dashboard");
+    router.replace("/home/summary");
     setLoading(false);
   };
   return (
