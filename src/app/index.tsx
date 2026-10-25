@@ -1,12 +1,28 @@
-import { StyleSheet, View } from "react-native";
-import SocialSignIn from "./social-sign-in";
+import SocialSignIn from "@/components/social-sign-in";
+import { authClient } from "@/lib/auth-client";
+import { Redirect } from "expo-router";
+import { ActivityIndicator, StyleSheet, View } from "react-native";
 
 export default function Index() {
-  return (
-    <View style={styles.container}>
-      <SocialSignIn />
-    </View>
-  );
+  const { data: session, isPending } = authClient.useSession();
+
+  if (isPending) {
+    return (
+      <View style={styles.container}>
+        <ActivityIndicator />
+      </View>
+    );
+  }
+
+  if (!session?.user) {
+    return (
+      <View style={styles.container}>
+        <SocialSignIn />
+      </View>
+    );
+  }
+
+  return <Redirect href="/home/summary" />;
 }
 
 const styles = StyleSheet.create({

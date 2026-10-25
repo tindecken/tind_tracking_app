@@ -16,12 +16,12 @@ export default function SummaryScreen() {
   }
 
   if (!user) {
-    return <Redirect href="/social-sign-in" />;
+    return <Redirect href="/" />;
   }
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Welcome, {user.name}</Text>
+      <Text style={styles.text}>Weldcomeee, {user.name}</Text>
       <Text style={styles.text}>No summary data yet.</Text>
       <AddTransaction />
     </View>

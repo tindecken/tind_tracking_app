@@ -13,7 +13,11 @@ export function AddTransaction({ onPress }: AddTransactionProps) {
       onPress={onPress}
       style={styles.button}
     >
-      <SymbolView name={{ ios: "plus", android: "add" }} tintColor="#ffffff" size={28} />
+      <SymbolView
+        name={{ ios: "plus", android: "add" }}
+        tintColor="#ffffff"
+        size={28}
+      />
     </Pressable>
   );
 }
